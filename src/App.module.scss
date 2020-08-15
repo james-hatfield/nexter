@@ -1,7 +1,9 @@
+@import "./sass/main.scss";
+
 .Container {
   height: 100vh;
-  width: 100%;
   display: grid;
+  grid-template-columns: 8rem 2fr 1fr;
   grid-template-areas:
     "side header realtors"
     "side features features"
@@ -9,8 +11,29 @@
     "side homes homes"
     "side gallery gallery"
     "side footer footer";
-  grid-template-columns: 10rem 2fr 1.5fr;
-  //   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+
+  @include breakpoints(mid-tab) {
+    grid-template-areas:
+      "side header header"
+      "side realtors realtors"
+      "side features features"
+      "side story story"
+      "side homes homes"
+      "side gallery gallery"
+      "side footer footer";
+  }
+
+  @include breakpoints(tab-port) {
+    grid-template-rows: 6rem auto;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+      "side side"
+      "header header"
+      "realtors realtors"
+      "features features"
+      "story story"
+      "homes homes"
+      "gallery gallery"
+      "footer footer";
+  }
 }

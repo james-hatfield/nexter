@@ -1,3 +1,5 @@
+@import "mixins";
+
 // COLOR VARIABLES
 $color-primary: #c69963;
 $color-primary-dark: #b28451;
@@ -22,6 +24,10 @@ $font-display: "Josefin Sans", sans-serif;
 
 html {
   font-size: 62.5%; // 1rem = 10px
+
+  @include breakpoints(mid-tab) {
+    font-size: 50%; // 1rem = 8px;
+  }
 }
 
 body {
@@ -29,4 +35,11 @@ body {
   font-family: $font-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h3 {
+  font-size: 2rem;
+  color: $color-primary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
