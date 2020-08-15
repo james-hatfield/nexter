@@ -1,0 +1,41 @@
+@import "../../sass/main.scss";
+
+.Sidebar {
+  grid-area: side;
+  background-color: $color-primary;
+  height: 100%;
+  width: 100%;
+
+  nav {
+    position: relative;
+    text-align: center;
+    margin: 1rem 2rem 0rem 2rem;
+    height: 4rem;
+    cursor: pointer;
+    span {
+      &,
+      &::before,
+      &::after {
+        width: 4rem;
+        display: inline-block;
+        border-bottom: 3px solid #fff;
+        cursor: pointer;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 1rem;
+      }
+
+      &::before {
+        top: 1.7rem;
+      }
+
+      &::after {
+        top: 2.7rem;
+      }
+    }
+  }
+}
