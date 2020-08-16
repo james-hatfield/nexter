@@ -1,3 +1,67 @@
+@import "../../sass/main.scss";
+
 .Features {
   grid-area: features;
+  padding: 8rem 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 32rem);
+  grid-gap: 10rem;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+
+  @media screen and (max-width: 1600px) {
+    padding: 8rem 6rem;
+    column-gap: 5rem;
+  }
+
+  @media screen and (max-width: 647px) {
+    font-size: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .Feature {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    @media screen and (max-width: 647px) {
+      grid-template-columns: 1fr auto 1fr;
+    }
+
+    svg {
+      justify-self: center;
+      margin-top: 0.5rem;
+      fill: $color-primary;
+      width: 4rem;
+      height: 4rem;
+
+      @media screen and (max-width: 647px) {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+
+    .Content {
+      width: 26rem;
+
+      @include breakpoints(mid-tab) {
+        width: 28rem;
+      }
+
+      @media screen and (max-width: 647px) {
+        width: 40rem;
+      }
+
+      h4 {
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-left: 1rem;
+      }
+    }
+  }
 }

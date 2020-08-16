@@ -28,6 +28,12 @@ html {
   @include breakpoints(mid-tab) {
     font-size: 50%; // 1rem = 8px;
   }
+  @include breakpoints(sm-phone) {
+    font-size: 43.75%; // 1rem = 7px;
+  }
+  @include breakpoints(xs-sm-phone) {
+    font-size: 37.5%; // 1rem = 6px;
+  }
 }
 
 body {

@@ -7,11 +7,11 @@
   }
   // 500px
   @else if $size == sm-phone {
-    @media (max-width: 37.5em) {
+    @media (max-width: 31.25em) {
       @content;
     }
   }
-  //900px
+  //600px
   @else if $size == phone {
     @media (max-width: 37.5em) {
       @content;
