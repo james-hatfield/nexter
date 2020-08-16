@@ -9,7 +9,7 @@ const Header = () => (
     <div className={classes.Heading}>
       <h3>Your own home:</h3>
       <h2>The ultimate personal freedom</h2>
-      <button>View our properties</button>
+      <button className={classes.Btn}>View our properties</button>
     </div>
     <div className={classes.Companies}>
       <span className={classes.Line}></span>

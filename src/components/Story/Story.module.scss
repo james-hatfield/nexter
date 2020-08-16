@@ -1,3 +1,112 @@
+@import "../../sass/main.scss";
+
 .Story {
   grid-area: story;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  align-items: center;
+  justify-items: center;
+  background-color: $color-grey-light-1;
+  height: 50vh;
+
+  @include breakpoints(tab-port) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5rem;
+  }
+
+  @include breakpoints(xs-sm-phone) {
+    height: 70vh;
+  }
+
+  .ImageContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(
+        to right,
+        rgba($color-primary, 0.6),
+        rgba($color-primary-dark, 0.6)
+      ),
+      url(../../assets/back.jpg);
+    background-size: cover;
+    background-position: top;
+
+    .Couple,
+    .Mansion {
+      border-radius: 3px;
+    }
+
+    .Couple {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+
+      @include breakpoints(tab-port) {
+        width: 35%;
+        left: 40%;
+      }
+
+      @include breakpoints(phone) {
+        width: 40%;
+        left: 40%;
+      }
+
+      @include breakpoints(xs-sm-phone) {
+        width: 50%;
+      }
+    }
+
+    .Mansion {
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      width: 50%;
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+
+      @include breakpoints(tab-port) {
+        width: 35%;
+        top: 65%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include breakpoints(phone) {
+        width: 40%;
+      }
+
+      @include breakpoints(xs-sm-phone) {
+        width: 50%;
+      }
+    }
+  }
+
+  .UserStory {
+    padding: 0 5rem 0 15rem;
+
+    *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    .Title {
+      color: $color-primary;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .Quote {
+      width: 80%;
+      letter-spacing: 1px;
+      line-height: 3.5rem;
+      font-size: 3rem;
+      transform: skewX(-10deg);
+    }
+
+    .Text {
+      font-size: 1.5rem;
+    }
+  }
 }
