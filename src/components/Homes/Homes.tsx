@@ -5,8 +5,8 @@ import HomeCard from "../HomeCard/HomeCard";
 
 const Homes = () => (
   <section className={classes.Homes}>
-    {homes.map((h) => (
-      <HomeCard {...h} />
+    {homes.map((h, i) => (
+      <HomeCard key={i} {...h} />
     ))}
   </section>
 );

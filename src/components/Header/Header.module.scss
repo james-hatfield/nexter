@@ -20,7 +20,7 @@
     align-items: flex-start;
     margin-top: 2rem;
 
-    img {
+    .Logo {
       width: 18%;
     }
   }
@@ -68,7 +68,7 @@
       grid-template-columns: repeat(auto-fit, minMax(1rem, 1fr));
       width: 100%;
 
-      img {
+      & > * {
         width: 10rem;
         filter: brightness(70%);
       }

@@ -4,7 +4,11 @@ import classes from "./Header.module.scss";
 const Header = () => (
   <header className={classes.Header}>
     <div className={classes.NexterLogo}>
-      <img src={require("../../assets/logo.png")} alt="Logo" />
+      <img
+        className={classes.Logo}
+        src={require("../../assets/logo.png")}
+        alt="Logo"
+      />
     </div>
     <div className={classes.Heading}>
       <h3>Your own home:</h3>
