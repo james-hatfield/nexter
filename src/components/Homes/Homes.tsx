@@ -1,5 +1,13 @@
 import React from "react";
 import classes from "./Homes.module.scss";
+import { homes } from "../../App.data";
+import HomeCard from "../HomeCard/HomeCard";
 
-const Homes = () => <section className={classes.Homes}>Homes</section>;
+const Homes = () => (
+  <section className={classes.Homes}>
+    {homes.map((h) => (
+      <HomeCard {...h} />
+    ))}
+  </section>
+);
 export default Homes;

@@ -1,3 +1,15 @@
+@import "../../sass/main.scss";
+
 .Homes {
   grid-area: homes;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40rem);
+  padding: 10rem 10rem;
+  grid-gap: 5rem;
+  justify-content: center;
+
+  @include breakpoints(tab-land) {
+    padding: 4rem 0;
+  }
 }

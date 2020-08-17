@@ -11,6 +11,11 @@
   justify-content: center;
   font-size: 2rem;
 
+  @media screen and (min-width: 2077px) {
+    padding: 8rem 40rem;
+    column-gap: 5rem;
+  }
+
   @media screen and (max-width: 1600px) {
     padding: 8rem 6rem;
     column-gap: 5rem;
